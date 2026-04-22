@@ -25,8 +25,15 @@ int bandingkan (const void *a, const void *b) {
 int main() {
     char str[100];
     scanf("%s", str); // input nama file
+    // printf("%s", str);
     FILE *fp;
-    if (strcmp(str, "file_1") == 0) { // if else untuk buka file sesuai input
+    fp = fopen(str, "r");
+    if (fp == NULL){
+        printf("File gagal dibuka");
+        return 1;
+    }
+    // printf("File berhasil dibuka");
+    /* if (strcmp(str, "file_1") == 0) { // if else untuk buka file sesuai input
         fp = fopen("C:\\Users\\fazad\\Downloads\\Praktikum\\day 2 njay\\soal-2-Ajilaca\\file_1", "r");
     } else if (strcmp(str, "file_2") == 0) {
         fp = fopen("C:\\Users\\fazad\\Downloads\\Praktikum\\day 2 njay\\soal-2-Ajilaca\\file_2", "r");
@@ -49,7 +56,7 @@ int main() {
     }else {
         printf("File tidak ditemukan.\n");
         return 1;
-    }
+    } */
     char line[200];
     Item diterima[100];
     Item ditolak[100];
