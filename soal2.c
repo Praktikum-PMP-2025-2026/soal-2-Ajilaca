@@ -95,13 +95,13 @@ int main() {
 fclose(fp);
     qsort(diterima, jumlah_diterima, sizeof(struct Item), bandingkan);
     qsort(ditolak, jumlah_ditolak, sizeof(struct Item), bandingkan);
-    printf("DITERIMA\n");
+    printf("DITERIMA");
     for (int i = 0; i < jumlah_diterima; i++) {
-        printf("%s %d\n", diterima[i].name, diterima[i].total);
+        printf("%s %d", diterima[i].name, diterima[i].total);
     }
-    printf("DITOLAK\n");
+    printf("DITOLAK");
     for (int i = 0; i < jumlah_ditolak; i++) {
-        printf("%s %d\n", ditolak[i].name, ditolak[i].total);
+        printf("%s %d", ditolak[i].name, ditolak[i].total);
     }
     return 0;
 
